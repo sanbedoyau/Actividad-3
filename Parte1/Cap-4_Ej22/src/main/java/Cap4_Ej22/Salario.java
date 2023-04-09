@@ -1,21 +1,14 @@
 package Cap4_Ej22;
 
 public class Salario {
-    double salariob,horas;
-    String nombre;
+    static double salariob,horas;
+    static String nombre;
     
-    Salario(double sal, double h, String nom){
-        this.salariob = sal;
-        this.horas = h;
-        this.nombre = nom;
-    }
-    
-    public void salario_mens(){
-        if (salariob*horas > 450000){
-            System.out.println(nombre + " su salario mensual es de $" + (salariob*horas));
+    static String salario_mens(double salariob, double horas, String nombre){
+        double salario = salariob*horas;
+        if (salario > 450000){
+            return nombre + " su salario mensual es de $" + salario;
         }
-        else{
-            System.out.println(nombre);
-        }
+        return nombre;
     }
 }

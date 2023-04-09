@@ -1,22 +1,17 @@
 package Cap3_Ej19;
 
 public class Triangulo {
-    float lado;
+    static float lado;
     
-    Triangulo(float lado){
-        this.lado = lado;
-    }
-    float perimetro(){
-        float p = lado*3;
-        return p;
+    static float perimetro(float lado){
+        return lado*3;
     }
     
-    double calc_altura(){
-        double h = Math.sqrt(Math.pow(lado,2) - Math.pow((lado/2),2));
-        return h;
+    static double calc_altura(float lado){
+        return Math.sqrt(Math.pow(lado,2) - Math.pow((lado/2),2));
     }
     
-    double area(){
+    static double area(float lado){
         double a = (Math.sqrt(Math.pow(lado,2) - Math.pow((lado/2),2)))*lado/2;
         return a;
     }

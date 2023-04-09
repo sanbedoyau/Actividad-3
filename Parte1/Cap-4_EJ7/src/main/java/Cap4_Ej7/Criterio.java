@@ -1,20 +1,15 @@
 package Cap4_Ej7;
 
 public class Criterio {
-    double A,B;
+    static double A,B;
     
-    Criterio(double A, double B){
-        this.A = A;
-        this.B = B;
-    }
-    
-    String mayor_menor(){
+    static String mayor_menor(double A, double B){
         if (A>B){
-            return "Mayor";
+            return "A es mayor que B";
         }
         else if (A<B){
-            return "Menor";
+            return "A es menor que B";
         }
-        return "Igual";
+        return "A y B son iguales";
     }
 }
