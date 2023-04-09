@@ -1,20 +1,12 @@
 package Cap3_Ej18;
 
 public class Trabajo {
-    int horas;
-    double salario;
-    float porcentaje;
+    static double horas,salario,porcentaje;
     
-    Trabajo(int horas, double salario, float porcentaje){
-        this.horas = horas;
-        this.salario = salario;
-        this.porcentaje = porcentaje;
+    static double salario_bruto(double horas, double salario){
+        return horas*salario;
     }
-    double salario_bruto(){
-        double salario_b = horas*salario;
-        return salario_b;
-    }
-    double salario_neto(){
+    static double salario_neto(double horas, double salario, double porcentaje){
         double salario_n = (horas*salario)*(1-porcentaje);
         return salario_n;
     }
