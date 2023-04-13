@@ -1,8 +1,6 @@
 package Cap3_Ej18;
 
 public class Trabajo {
-    static double horas,salario,porcentaje;
-    
     static double salario_bruto(double horas, double salario){
         return horas*salario;
     }
