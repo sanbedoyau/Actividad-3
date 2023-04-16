@@ -1,9 +1,7 @@
 package Cap3_Ej19;
 
 public class Triangulo {
-    static float lado;
-    
-    static float perimetro(float lado){
+    static double perimetro(float lado){
         return lado*3;
     }
     
