@@ -1,9 +1,6 @@
 package Cap4_Ej10;
 
 public class Matricula {
-    static double pat;
-    static byte est;
-    
     static double Valor_Matricula(double pat, byte est){
         if ((pat > 2000000) && (est > 3)){
             return 50000 + (pat*0.03);
