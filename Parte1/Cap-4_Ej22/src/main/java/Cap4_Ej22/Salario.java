@@ -1,9 +1,6 @@
 package Cap4_Ej22;
 
 public class Salario {
-    static double salariob,horas;
-    static String nombre;
-    
     static String salario_mens(double salariob, double horas, String nombre){
         double salario = salariob*horas;
         if (salario > 450000){
