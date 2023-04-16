@@ -24,12 +24,6 @@ class Calculos:
             Cubo.append(((self.datos[i])**3))
         return Cubo
     
-    def Añadir(self,a):
-        self.datos.append(a)
-    
-    def Borrar(self):
-        self.datos.clear()
-    
     def getInt(self,txt):
         a = int(txt.get())
         txt.delete(0,tk.END)
@@ -61,10 +55,10 @@ txtAñadir = tk.Entry(VentanaPrincipal)
 txtAñadir.grid(row = 2, column = 0, padx = 5, pady = 5)
 
 #Botones
-btnAñadir = tk.Button(VentanaPrincipal, text = "Añadir", command = lambda: Datos.Añadir(Datos.getInt(txtAñadir)))
+btnAñadir = tk.Button(VentanaPrincipal, text = "Añadir", command = lambda: Datos.datos.append(Datos.getInt(txtAñadir)))
 btnAñadir.grid(row = 2, column = 1, padx = 0, pady = 5)
 
-btnBorrar = tk.Button(VentanaPrincipal, text = "Borrar", command = lambda: Datos.Borrar())
+btnBorrar = tk.Button(VentanaPrincipal, text = "Borrar", command = lambda: Datos.datos.clear())
 btnBorrar.grid(row = 2, column = 2, pady = 5)
 
 btnCalcular = tk.Button(VentanaPrincipal, text = "Calcular", command = lambda: Datos.Final())

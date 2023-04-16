@@ -16,12 +16,6 @@ class mayor_grupo:
         a = float(txt.get())
         txt.delete(0,tk.END)
         return a
-    
-    def Añadir(self,a):
-        self.datos.append(a)
-
-    def Borrar(self):
-        self.datos.clear()
 
     def Final(self):
         mayor = self.mayor()
@@ -46,10 +40,10 @@ txtDatos = tk.Entry(VentanaPrincipal)
 txtDatos.grid(row = 2, column = 0, padx = 5, pady = 5)
 
 #Botones
-btnAñadir = tk.Button(VentanaPrincipal, text = "Añadir", command = lambda: Datos.Añadir(Datos.getFloat(txtDatos)))
+btnAñadir = tk.Button(VentanaPrincipal, text = "Añadir", command = lambda: Datos.datos.append(Datos.getFloat(txtDatos)))
 btnAñadir.grid(row = 2, column = 1, pady = 5)
 
-btnBorrar = tk.Button(VentanaPrincipal, text = "Borrar", command = lambda: Datos.Borrar())
+btnBorrar = tk.Button(VentanaPrincipal, text = "Borrar", command = lambda: Datos.datos.clear())
 btnBorrar.grid(row = 2, column = 2, pady = 5)
 
 btnCalcular = tk.Button(VentanaPrincipal, text = "Calcular", command = lambda: Datos.Final())
